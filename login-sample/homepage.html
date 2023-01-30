@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="./navstyles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <h1 class="navbar-title">HenlyBook</h1>
+      <nav class="navbar-menu">
+        <a href="./homepage.html" class="a">Home</a>
+        <a href="./createbook.html" class="a">Create book</a>
+        <a href="./login.html" class="a">LogOut</a>
+      </nav>
+    </nav>
+    <div class="head">
+      <h1>Welcome to the library, check out our books😁</h1>
+    </div>
+
+    <div class="box box-1">
+      <div class="bookdiv">
+        <h2>Book Title</h2>
+        <p>Book Author</p>
+        <img src="./bookscover.png" alt="bookcoverimg" />
+        <div class="formbuttons">
+          <form action="/book/updateBook" class="inputRUD" method="post">
+            <input
+              type="hidden"
+              value="book.id"
+              name="bookID"
+              placeholder="Delete"
+            />
+            <button class="editbookbtn">Edit</button>
+          </form>
+          <form action="/book/bookDetails" class="inputRUD" method="post">
+            <input
+              type="hidden"
+              value="book.id"
+              name="bookID"
+              placeholder="Delete"
+            />
+            <button class="viewbookbtn">View Details</button>
+          </form>
+          <form action="/book/deleteBook" class="inputRUD" method="post">
+            <input
+              type="hidden"
+              value="book.id"
+              name="bookID"
+              placeholder="Delete"
+            />
+            <button class="creatbookbtn">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
